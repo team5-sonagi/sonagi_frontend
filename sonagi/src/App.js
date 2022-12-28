@@ -19,7 +19,7 @@ function App() {
         <Route path="create" element={<CreatePage />} />
         <Route path="question" element={<QuestionPage />} />
         <Route path="mypage" element={<MyPage />} />
-        <Route path="Register" element={<RegisterPage />} />
+        <Route path="register" element={<RegisterPage />} />
         <Route path="comment" element={<CommentPage />} />
         <Route path="qna/:id" element={<QnA />} />
         <Route path="login" element={<Login />} />
