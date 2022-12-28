@@ -28,7 +28,8 @@ function Login() {
 
   return (
     <div className="body-container">
-      <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"></link>
+      <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet"></link>
+
       <p className="login_letter">로그인</p>
       <div className="contents">
         <div>
