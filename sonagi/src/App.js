@@ -8,6 +8,7 @@ import MyPage from "./pages/MyPage";
 import RegisterPage from "./pages/RegisterPage";
 import CommentPage from "./pages/CommentPage";
 import QnA from "./pages/QnAPage";
+import Login from "./pages/Login";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         <Route path="register" element={<RegisterPage />} />
         <Route path="comment" element={<CommentPage />} />
         <Route path="qna/:id" element={<QnA />} />
-        
+        <Route path="login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
