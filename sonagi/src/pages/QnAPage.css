@@ -32,3 +32,10 @@ th,td{
 .qtd{
     width: 50%;
 }
+
+.버튼{
+    margin-left: 20px;
+}
+.아이콘{
+    height: 30px;
+}
