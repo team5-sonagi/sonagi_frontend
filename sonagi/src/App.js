@@ -7,7 +7,7 @@ import QuestionPage from "./pages/QuestionPage";
 import MyPage from "./pages/MyPage";
 import RegisterPage from "./pages/RegisterPage";
 import CommentPage from "./pages/CommentPage";
-
+import QnA from "./pages/QnAPage";
 
 function App() {
   return (
@@ -16,10 +16,11 @@ function App() {
       <Routes>
         <Route index element={<MainPage />} />
         <Route path="create" element={<CreatePage />} />
-        <Route path="question/:id" element={<QuestionPage />} />
+        <Route path="question" element={<QuestionPage />} />
         <Route path="mypage" element={<MyPage />} />
         <Route path="Register" element={<RegisterPage />} />
         <Route path="comment" element={<CommentPage />} />
+        <Route path="qna/:id" element={<QnA />} />
       </Routes>
     </BrowserRouter>
   );

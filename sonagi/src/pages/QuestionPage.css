@@ -1,0 +1,26 @@
+
+.divOne {
+  width: 60%;
+  height: 100%;
+  border: 1px solid black;
+  float: left;
+
+}
+.divTwo {
+  width: 39%;
+  height: 100%;
+  border: 1px solid black;
+  float: left;
+}
+
+.tabOne {
+
+}
+
+.tabTwo{
+
+}
+div {
+  font-family: "Gowun Batang", serif;
+  text-decoration: none;
+}
