@@ -4,14 +4,14 @@ import "./Navigation.css";
 export default function Navigation() {
   return (
     <div className="container">
-      <div>
-        <Link to="/">소나기</Link>
+      <div className="meme">
+        <Link to="/">소나기 Home</Link>
       </div>
-      <div>
-        <Link to="/create">질문 생성</Link>
-      </div>
-      <div>
+      <div className="meme">
         <Link to="/mypage">마이페이지</Link>
+      </div>
+      <div className="meme">
+        <Link to="/question">질문목록</Link>
       </div>
     </div>
   );
