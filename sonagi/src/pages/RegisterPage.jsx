@@ -1,6 +1,40 @@
-import './RegisterPage.css';
+import axios from "axios";
+import { useState } from "react";
+import "./RegisterPage.css";
 
 function RegisterPage() {
+  const [id, setId] = useState();
+  const [pw, setPw] = useState();
+  const [name, setName] = useState();
+  const [bod, setBod] = useState();
+  const [mbti, setMbti] = useState();
+  const [personality, setPersonality] = useState([]);
+  const [familyCode, setFamilyCode] = useState();
+  const onChangeId = (e) => setId(e.currentTarget.value);
+  const onChangePw = (e) => setPw(e.currentTarget.value);
+  const onChangeName = (e) => setName(e.currentTarget.value);
+  const onChangeBod = (e) => setBod(e.currentTarget.value);
+  const onChangeMbti = (e) => setMbti(e.currentTarget.value);
+  const onChangeFamilyCode = (e) => setFamilyCode(e.currentTarget.value);
+
+  const HandleSignup = () => {
+    let body = {
+      username: id,
+      password: pw,
+      name,
+      familyCode,
+    };
+    axios
+      .post("http://54.180.139.126/register", body)
+      .then((res) => {
+        alert(`회원가입이 완료되었습니다.`);
+        window.location.href = "/login";
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
   //년도 드롭박스
   function loop_birth_year() {
     let year_arr = [];
@@ -29,11 +63,11 @@ function RegisterPage() {
 
   //MBTI 라디오버튼
   function loop_MBTI() {
-    let MBTI_arr = ["ISTJ", "ISFJ" ,"INFJ", "INTJ", "ISTP", "ISFP", "INFP", "INTP", "ESTP", "ESFP", "ENFP", "ENTP", "ESTJ", "ESFJ", "ENFJ", "ENTJ"];
+    let MBTI_arr = ["ISTJ", "ISFJ", "INFJ", "INTJ", "ISTP", "ISFP", "INFP", "INTP", "ESTP", "ESFP", "ENFP", "ENTP", "ESTJ", "ESFJ", "ENFJ", "ENTJ"];
     let HTML_MBTI_arr = [];
     for (let i = 0; i < 16; i++) {
       HTML_MBTI_arr.push(
-        <div className='MBTI'>
+        <div className="MBTI">
           <input type="radio" name="MBTI" id={MBTI_arr[i]} value={MBTI_arr[i]} />
           <label for={MBTI_arr[i]}>{MBTI_arr[i]}</label>
         </div>
@@ -44,12 +78,11 @@ function RegisterPage() {
 
   //성격 키워드 체크박스
   function loop_personality() {
-    let personality_arr = ["논쟁을 좋아하는", "예의바른" ,"신중한", "참신한", "열정적인", "지도력 있는", "인내심 많은", "경쟁심 많은", "희생적인", "의존적인", "마음이 넓은", "기발한", "사교적인", "차분한", "독립적인", "줏대있는"
-                    ,"겸손한", "성실한", "분석적인", "충동적인", "진지한", "이해심 많은", "자발적인", "용기있는", "논리적인", "완벽주의자", "절제된", "공감을 잘하는", "솔직한", "감성적인" ];
+    let personality_arr = ["논쟁을 좋아하는", "예의바른", "신중한", "참신한", "열정적인", "지도력 있는", "인내심 많은", "경쟁심 많은", "희생적인", "의존적인", "마음이 넓은", "기발한", "사교적인", "차분한", "독립적인", "줏대있는", "겸손한", "성실한", "분석적인", "충동적인", "진지한", "이해심 많은", "자발적인", "용기있는", "논리적인", "완벽주의자", "절제된", "공감을 잘하는", "솔직한", "감성적인"];
     let HTML_personality_arr = [];
     for (let i = 0; i < personality_arr.length; i++) {
       HTML_personality_arr.push(
-        <div className='personality'>
+        <div className="personality">
           <input type="checkbox" id={`personality+${i}`} value={`personality+${i}`} />
           <label for={`personality+${i}`}>{personality_arr[i]}</label>
         </div>
@@ -60,17 +93,15 @@ function RegisterPage() {
 
   // HTML
   return (
-    <div className='pagemmain'>
-       <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet"></link>
-      
-       <h2 className="sehtw">회원가입</h2>
-      <h3 className="sehth">
-        질문에 답해가며 스스로를 알아가는 시간♡
-      </h3>
-      <div className='centxt'>
-        아이디 : <input type="text"></input> <br />
-        비밀번호 : <input type="text"></input> <br />
-        성명 : <input type="text"></input> <br />
+    <div className="pagemmain">
+      <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet"></link>
+
+      <h2 className="sehtw">회원가입</h2>
+      <h3 className="sehth">질문에 답해가며 스스로를 알아가는 시간♡</h3>
+      <div className="centxt">
+        아이디 : <input type="text" value={id} onChange={onChangeId}></input> <br />
+        비밀번호 : <input type="password" value={pw} onChange={onChangePw}></input> <br />
+        성명 : <input type="text" value={name} onChange={onChangeName}></input> <br />
         생년월일 :
         <form className="birth_year">
           <select name="birth_year" id="birth_year">
@@ -90,17 +121,15 @@ function RegisterPage() {
           </select>
           <label for="cars">일</label>
         </form>
-        <br/><br></br>
-        MBTI :
-        <div className='MBTI-container'>
-          {loop_MBTI()}
-        </div>
-        <br/>
-        자신을 소개해보세요! :
-        <form className='perst'>
-          {loop_personality()}
-        </form>
+        <br />
+        <br></br>
+        MBTI :<div className="MBTI-container">{loop_MBTI()}</div>
+        <br />
+        자신을 소개해보세요! :<form className="perst">{loop_personality()}</form>
       </div>
+      <button type="submit" onClick={HandleSignup}>
+        회원가입
+      </button>
     </div>
   );
 }

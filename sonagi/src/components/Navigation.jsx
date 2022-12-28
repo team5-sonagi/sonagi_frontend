@@ -1,8 +1,17 @@
 import { Link } from "react-router-dom";
 import "./Navigation.css";
 import React from "react";
+import { useState } from "react";
 
 export default function Navigation() {
+  const [token, setToken] = useState(localStorage.getItem("token"));
+
+  const logout = () => {
+    localStorage.removeItem("token");
+    alert("로그아웃 되었습니다.");
+    window.location.href = "/";
+  };
+
   return (
     <nav className="wrapper">
       <div className="meme">
@@ -15,7 +24,13 @@ export default function Navigation() {
         <Link to="/question">질문목록</Link>
       </div>
       <div className="meme">
-        <Link to="/register">회원가입</Link>
+        {token ? (
+          <div className="meme" onClick={logout}>
+            <a>로그아웃</a>
+          </div>
+        ) : (
+          <Link to="/login">로그인</Link>
+        )}
       </div>
     </nav>
   );
