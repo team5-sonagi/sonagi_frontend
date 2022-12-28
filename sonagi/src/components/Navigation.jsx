@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import "./Navigation.css";
+import React from "react";
 
 export default function Navigation() {
   return (
-    <div className="container">
+    <nav className="wrapper">
       <div className="meme">
         <Link to="/">소나기 Home</Link>
       </div>
@@ -13,6 +14,6 @@ export default function Navigation() {
       <div className="meme">
         <Link to="/question">질문목록</Link>
       </div>
-    </div>
+    </nav>
   );
 }
