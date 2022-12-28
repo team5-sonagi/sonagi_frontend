@@ -33,10 +33,10 @@ function RegisterPage() {
     let HTML_MBTI_arr = [];
     for (let i = 0; i < 16; i++) {
       HTML_MBTI_arr.push(
-        <>
+        <div className='MBTI'>
           <input type="radio" name="MBTI" id={MBTI_arr[i]} value={MBTI_arr[i]} />
           <label for={MBTI_arr[i]}>{MBTI_arr[i]}</label>
-        </>
+        </div>
       );
     }
     return HTML_MBTI_arr;
@@ -45,14 +45,14 @@ function RegisterPage() {
   //성격 키워드 체크박스
   function loop_personality() {
     let personality_arr = ["논쟁을 좋아하는", "예의바른" ,"신중한", "참신한", "열정적인", "지도력 있는", "인내심 많은", "경쟁심 많은", "희생적인", "의존적인", "마음이 넓은", "기발한", "사교적인", "차분한", "독립적인", "줏대있는"
-                    ,"겸손한", "성실한", "분석적인", "충동적인", "진지한", "이해심 많은", "자발적인", "용기있는", "논리적인", "완벽주의자", "절제된", "공감을 잘하는", "솔직한", "감성적인" ,"긍정적인", "전통적인"];
+                    ,"겸손한", "성실한", "분석적인", "충동적인", "진지한", "이해심 많은", "자발적인", "용기있는", "논리적인", "완벽주의자", "절제된", "공감을 잘하는", "솔직한", "감성적인" ];
     let HTML_personality_arr = [];
     for (let i = 0; i < personality_arr.length; i++) {
       HTML_personality_arr.push(
-        <>
+        <div className='personality'>
           <input type="checkbox" id={`personality+${i}`} value={`personality+${i}`} />
           <label for={`personality+${i}`}>{personality_arr[i]}</label>
-        </>
+        </div>
       );
     }
     return HTML_personality_arr;
@@ -60,9 +60,14 @@ function RegisterPage() {
 
   // HTML
   return (
-    <div>
-      <h2>회원가입</h2>
-      <div>
+    <div className='pagemmain'>
+       <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet"></link>
+      
+       <h2 className="sehtw">회원가입</h2>
+      <h3 className="sehth">
+        질문에 답해가며 스스로를 알아가는 시간♡
+      </h3>
+      <div className='centxt'>
         아이디 : <input type="text"></input> <br />
         비밀번호 : <input type="text"></input> <br />
         성명 : <input type="text"></input> <br />
@@ -85,14 +90,14 @@ function RegisterPage() {
           </select>
           <label for="cars">일</label>
         </form>
-        <br/>
+        <br/><br></br>
         MBTI :
-        <div className='MBTI'>
+        <div className='MBTI-container'>
           {loop_MBTI()}
         </div>
         <br/>
         자신을 소개해보세요! :
-        <form>
+        <form className='perst'>
           {loop_personality()}
         </form>
       </div>

@@ -8,7 +8,7 @@ nav{
   display: flex;
   justify-content: center;
   flex-direction: row;
-  gap: 150px;
+  gap: 100px;
   background: #D0B8A8;
   padding : 10px;
   float : left;text-align: center;
