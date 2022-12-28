@@ -3,15 +3,32 @@ div{
     height: 100%;
     text-decoration: none;
 }
+.pagemmain{
+    background-color: #f8ede3;
+}
+.sehtw{
+    padding-bottom: 40px;
+}
+
+.sehth{
+    margin : 0;
+}
+
 .tabAns{
     width: 100%;
     height: 100%;
-    background-color: whitesmoke;
     border-collapse: collapse;
-
+    margin:0;  
 }
 th,td{
     border-top: hidden;
     border: 3px solid white;
     padding: 5px;
+}
+.qtr{
+    height: 31vh;
+    
+}
+.qtd{
+    width: 50%;
 }

@@ -1,24 +1,60 @@
+.pageQue {
+  background-color: #f8ede3;
+  height: 180vh;
+  padding-bottom: 0px;
+}
+
+.sehtw {
+  margin: 0;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 40px;
+  color: #85586F;
+    font-weight:bold;
+    font-size: 40px;
+}
+
+.sehth{
+    text-align: center;
+    padding : 20px;
+    background-color:  #DFD3C3;
+    font-size:22px;
+}
+
+.nananame{
+    font-size: 20px;
+    font-weight: bolder;
+    color: #85586F;
+}
 
 .divOne {
-  width: 60%;
-  height: 100%;
+  width: 65%;
   border: 1px solid black;
   float: left;
-
+  margin: 0;
+  text-align: center;
 }
 .divTwo {
-  width: 39%;
-  height: 100%;
+  width: 34%;
   border: 1px solid black;
   float: left;
+  margin-bottom: 0;
+  text-align: center;
 }
-
+.numlist{
+    width : 30px;
+}
 .tabOne {
-
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.tabTwo{
+a{
+    color : black;
 
+}
+.tabOne>tr:hover{
+    background-color: #D0B8A8;
 }
 div {
   font-family: "Gowun Batang", serif;

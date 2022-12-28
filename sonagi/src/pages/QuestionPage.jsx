@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from 'react-router-dom';
-import styles from "./QuestionPage.css";
+import "./QuestionPage.css";
 
 const questionList = [
   {
@@ -154,17 +154,17 @@ export default function CreatePage() {
   };
 
   return (
-    <div>
+    <div className="pageQue">
       <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet"></link>
-      <h2>질문 목록</h2>
-      <h3>
+      <h2 className="sehtw">질문 목록</h2>
+      <h3 className="sehth">
         매일매일 달라지는 기본 질문과 가족들이 서로에게 궁금한 추가 질문들
       </h3>
 
       <div className="divOne">
-        <p>기본 질문</p>
+        <p className="nananame">기본 질문</p>
         <table className="tabOne">
-          <th>번호</th>
+          <th className="numlist">번호</th>
           <th>질문</th>
 
           {questionList.map((question) => (
@@ -178,9 +178,9 @@ export default function CreatePage() {
       </div>
 
       <div className="divTwo">
-        <p>추가한 질문</p>
-        <table className="tabTwo">
-          <th>번호</th>
+        <p className="nananame">추가한 질문</p>
+        <table className="tabOne">
+          <th className="numlist">번호</th>
           <th>질문</th>
 
           <tr><td>1</td>
