@@ -5,6 +5,7 @@ import MainPage from "./pages/MainPage";
 import CreatePage from "./pages/CreatePage";
 import QuestionPage from "./pages/QuestionPage";
 import MyPage from "./pages/MyPage";
+import QnA from "./pages/QnAPage";
 
 function App() {
   return (
@@ -13,8 +14,10 @@ function App() {
       <Routes>
         <Route index element={<MainPage />} />
         <Route path="create" element={<CreatePage />} />
-        <Route path="question/:id" element={<QuestionPage />} />
+        <Route path="question" element={<QuestionPage />} />
         <Route path="mypage" element={<MyPage />} />
+        <Route path="question" element={<QuestionPage />} />
+        <Route path="qna/:id" element={<QnA />} />
       </Routes>
     </BrowserRouter>
   );
