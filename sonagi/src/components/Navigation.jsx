@@ -15,7 +15,7 @@ export default function Navigation() {
         <Link to="/question">질문목록</Link>
       </div>
       <div className="meme">
-        <Link to="/register">회원가입</Link>
+        <Link to="/login">로그인</Link>
       </div>
     </nav>
   );
