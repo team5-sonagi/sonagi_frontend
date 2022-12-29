@@ -23,6 +23,7 @@
 }
 .MBTI-container{
     display: block;
+    height: fit-content;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -105,8 +106,13 @@
 }
 
 .centxt{
+    margin-top: 20px;
+    height: fit-content;
     text-align: center;
     font-size: large;
     font-weight: bolder;
-    line-height: 2em;
+    line-height: fit;
+}
+.centxt input{
+    margin: 8px;
 }

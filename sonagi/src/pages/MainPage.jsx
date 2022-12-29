@@ -62,14 +62,14 @@ export default function MainPage() {
       <div className="Qone">
         <p className="firstQ">{id}번째 기본 질문</p>
         <p className="secondQ">{question}</p>
-        <p className="AnsQ">{editable ? <input type="text" value={text1} onChange={handleChange1} onKeyDown={handleKeyDown} /> : <div onClick={editOn}>{text1}</div>}</p>
+        <p className="AnsQ">{editable ? <input type="text" placeholder={text1} onChange={handleChange1} onKeyDown={handleKeyDown}/> : <div onClick={editOn}></div>}</p>
       </div>
       <div className="Qtwo">
         <p className="firstQ">
           <br></br>오늘의 추가 질문
         </p>
         <p className="secondQ">"엄마"의 MBTI는?</p>
-        <p className="AnsQ">{editable ? <input type="text" value={text2} onChange={handleChange2} onKeyDown={handleKeyDown} /> : <div onClick={editOn}>{text2}</div>}</p>
+        <p className="AnsQ">{editable ? <input type="text" placeholder={text2} onChange={handleChange2} onKeyDown={handleKeyDown} /> : <div onClick={editOn}>{text2}</div>}</p>
       </div>
     </div>
   );

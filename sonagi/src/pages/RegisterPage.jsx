@@ -102,6 +102,7 @@ function RegisterPage() {
         아이디 : <input type="text" value={id} onChange={onChangeId}></input> <br />
         비밀번호 : <input type="password" value={pw} onChange={onChangePw}></input> <br />
         성명 : <input type="text" value={name} onChange={onChangeName}></input> <br />
+        가족코드 : <input type="text" value={familyCode} onChange={onChangeFamilyCode}></input><br/>
         생년월일 :
         <form className="birth_year">
           <select name="birth_year" id="birth_year">

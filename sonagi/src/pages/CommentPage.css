@@ -1,11 +1,14 @@
 .container {
+  height: fit-content;
   margin: 20px;
 }
 
 .question {
+  margin-bottom: 10px;
   font-size: 20pt;
 }
 
 .comment {
+  margin-top: 10px;
   font-size: 15pt;
 }

@@ -185,7 +185,7 @@ export default function CreatePage() {
 
           <tr>
             <td>1</td>
-            <td>{editable ? <input type="text" value={text1} onChange={handleChange1} onKeyDown={handleKeyDown} /> : <div onClick={editOn}>{text1}</div>}</td>
+            <td>{editable ? <input type="text" placeholder={text1} onChange={handleChange1} onKeyDown={handleKeyDown} /> : <div onClick={editOn}>{text1}</div>}</td>
           </tr>
 
           <tr>

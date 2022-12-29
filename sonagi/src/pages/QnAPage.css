@@ -16,20 +16,22 @@ div{
 
 .tabAns{
     width: 100%;
-    height: 100%;
+    height: 70%;
     border-collapse: collapse;
     margin:0;  
 }
 th,td{
+    height: fit-content;
     border-top: hidden;
     border: 3px solid white;
     padding: 5px;
 }
 .qtr{
-    height: 31vh;
+    height: fit-content;
     
 }
 .qtd{
+    height: fit-content;
     width: 50%;
 }
 

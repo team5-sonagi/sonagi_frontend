@@ -38,6 +38,7 @@
   }
 
 .AnsQ {
+    margin-top: 10px;
     height: 40px;
     border: none;
     border-radius: 10px;
@@ -46,6 +47,10 @@
     font-size: 1.2em;
     background-color: #F8EDE3;
     opacity: 0.6;
+}
+.AnsQ input{
+  width: 400px;
+  font-size: large;
 }
 
 .Qtwo {
